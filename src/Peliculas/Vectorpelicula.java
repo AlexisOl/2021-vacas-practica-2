@@ -31,13 +31,11 @@ public class Vectorpelicula {
 
 
 
-    // fin agregar clientes
 
     public void mostrarPeliculas(){
         System.out.println("\n\n Clientes de memorabilia");
         for (int i = 0; i < (siguienteCodigo-1); i++) {
             System.out.println("-"+i+") "+peliculas[i].getInformacion());
-            //System.out.println("-"+i+") "+clientes[i].getId() + " nombre "+clientes[i].getNombre()+ " telefono "+clientes[i].getTelefono());
 
         }
 
@@ -59,7 +57,6 @@ public class Vectorpelicula {
                     cambio= (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) < 0 );
 
                 if(cambio ){
-                    //clientes i va antes que clientes j <0 descendente
                     pelicula aux = peliculas[j];
                     peliculas[j] = peliculas[j+1];
                     peliculas[j+1]= aux;
