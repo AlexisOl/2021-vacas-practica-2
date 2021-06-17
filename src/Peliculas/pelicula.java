@@ -1,4 +1,4 @@
-package Peliculas;
+package src.Peliculas;
 
 public class pelicula {
 
@@ -48,13 +48,8 @@ public class pelicula {
         return año;
     }
 
-    @Override
-    public String toString() {
-        return "pelicula{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", año=" + año +
-                ", categoria='" + categoria + '\'' +
-                '}';
+    public String getInformacion(){
+        String resultado = "Id: "+id+" Nombre de la pelicula: " + nombre + " año: "+año+" categoria: "+categoria;
+        return resultado;
     }
 }
