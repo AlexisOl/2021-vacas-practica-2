@@ -1,7 +1,7 @@
 package src.tienda;
 
 import src.clientes.VectorClientes;
-
+import src.Peliculas.*;
 public class Principal {
 
     public static void main(String[] args){
@@ -9,7 +9,7 @@ public class Principal {
     }
 
     private VectorClientes tablaClientes = new VectorClientes();
-
+    private vectorPeliculas tablaPelicula = new vectorPeliculas();
     public Principal(){
 
         int menu = 0;
@@ -20,6 +20,9 @@ public class Principal {
             System.out.println("2) Mostrar clientes");
             System.out.println("3) Ordenar Clientes Ascente");
             System.out.println("4) Ordenar Clientes Descendente");
+            System.out.println("5| ingreso de peliculas");
+            System.out.println("6| Mostrar peliculas" );
+            System.out.println("7| ordenar peliculas");
             System.out.println("-1) Salir");
             System.out.println("\n");
             menu = IngresoDatos.getEntero("Ingrese la opción ", true);
@@ -46,6 +49,23 @@ public class Principal {
                 tablaClientes.mostrarClientes();
                 System.out.println("\n\nOrdenado:");
                 tablaClientes.ordenarPorNombre(false);
+                tablaClientes.mostrarClientes();
+            }
+
+            if (menu == 5 ){
+                //ingreso de datos de peliculas
+                tablaPelicula.agregarPeliculas();
+            }
+            if (menu == 6){
+                //mostrar peliculas
+                tablaPelicula.mostrarPeliculas();
+            }
+            if (menu == 7){
+                //mostrar peliculas ordenadas
+                System.out.println("Desordenado:");
+                tablaClientes.mostrarClientes();
+                System.out.println("\n\nOrdenado:");
+                tablaClientes.ordenarPorNombre(true);
                 tablaClientes.mostrarClientes();
             }
 
