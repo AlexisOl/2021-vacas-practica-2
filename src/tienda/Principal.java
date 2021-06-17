@@ -14,7 +14,7 @@ public class Principal {
     }
 
     private VectorClientes tablaClientes = new VectorClientes();
-    private vectorPeliculas tablaPelicula = new vectorPeliculas();
+    private Vectorpelicula tablaPelicula = new Vectorpelicula();
     public Principal(){
 
         int menu = 0;

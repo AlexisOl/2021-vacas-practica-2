@@ -23,7 +23,7 @@ public class Vectorpelicula {
     }
 
     public void agregarPeliculas(){
-        String nombre = IngresoDatos.getTexto("Ingrese el nombre del cliente");
+        String nombre = IngresoDatos.getTexto("Ingrese el nombre de la pelicula");
         int año = IngresoDatos.getEntero("Ingrese el año", false);
         String categoria = IngresoDatos.getTexto("INgrese la categoria");
         agregarPeliculas(nombre, año, categoria);
@@ -33,7 +33,7 @@ public class Vectorpelicula {
 
     // fin agregar clientes
 
-    public void mostrarClientes(){
+    public void mostrarPeliculas(){
         System.out.println("\n\n Clientes de memorabilia");
         for (int i = 0; i < (siguienteCodigo-1); i++) {
             System.out.println("-"+i+") "+peliculas[i].getInformacion());
